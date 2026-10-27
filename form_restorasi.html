@@ -1,0 +1,121 @@
+<!-- WATERMARK: 202532003_Dzaky Fadhlurrahman Farozah -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pengajuan Restorasi Naskah</title>
+</head>
+<body>
+
+    <header>
+        <h1>Formulir Pengajuan Restorasi &amp; Digitalisasi Naskah</h1>
+        <p><em>Lengkapi data pemilik dan spesifikasi naskah secara akurat untuk verifikasi laboratorium</em></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="katalog.html">Katalog &amp; Status Restorasi</a></li>
+            <li><a href="form_restorasi.html">Formulir Pengajuan Restorasi</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Permohonan Layanan Preservasi</h2>
+            <p>Silakan isi formulir di bawah ini. Tim kurator laboratorium kami akan menghubungi Anda dalam 2x24 jam.</p>
+
+            <form action="#" method="post">
+                
+                <!-- Kelompok 1: Data Pengaju -->
+                <fieldset>
+                    <legend><strong>Identitas Pemilik / Kolektor Naskah</strong></legend>
+                    <br>
+
+                    <label for="nama_lengkap">Nama Lengkap Pengaju:</label><br>
+                    <input type="text" id="nama_lengkap" name="nama_lengkap" required minlength="3" placeholder="Contoh: Dr. Ahmad Subardjo"><br><br>
+
+                    <label for="email_pemilik">Alamat Email Aktif:</label><br>
+                    <input type="email" id="email_pemilik" name="email_pemilik" required placeholder="nama@instansi.ac.id"><br><br>
+
+                    <label for="nomor_telepon">Nomor WhatsApp / Kontak:</label><br>
+                    <input type="tel" id="nomor_telepon" name="nomor_telepon" required pattern="[0-9]{10,14}" placeholder="081234567890"><br><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Kelompok 2: Spesifikasi Fisik Naskah -->
+                <fieldset>
+                    <legend><strong>Spesifikasi &amp; Metadata Naskah</strong></legend>
+                    <br>
+
+                    <label for="judul_naskah">Judul / Draf Identifikasi Naskah:</label><br>
+                    <input type="text" id="judul_naskah" name="judul_naskah" required placeholder="Contoh: Manuskrip Mantra Etnobotani"><br><br>
+
+                    <label for="jenis_bahan">Jenis Bahan / Media Naskah:</label><br>
+                    <select id="jenis_bahan" name="jenis_bahan" required>
+                        <option value="">-- Pilih Jenis Media --</option>
+                        <option value="lontar">Daun Lontar</option>
+                        <option value="daluang">Kertas Daluang / Saeh</option>
+                        <option value="bambu">Bilah Bambu / Kayu</option>
+                        <option value="kertas_eropa">Kertas Eropa Kuno</option>
+                        <option value="lainnya">Media Lainnya</option>
+                    </select><br><br>
+
+                    <label for="tanggal_penyerahan">Rencana Tanggal Penyerahan Fisik:</label><br>
+                    <input type="date" id="tanggal_penyerahan" name="tanggal_penyerahan" required><br><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Kelompok 3: Kondisi & Pilihan Layanan (Radio & Checkbox) -->
+                <fieldset>
+                    <legend><strong>Kondisi Fisik &amp; Layanan yang Dibutuhkan</strong></legend>
+                    <br>
+
+                    <p><strong>Tingkat Kerusakan Fisik Saat Ini (Pilih Salah Satu):</strong></p>
+                    <input type="radio" id="kerusakan_ringan" name="tingkat_kerusakan" value="ringan" required>
+                    <label for="kerusakan_ringan">Ringan (Debu / Berkerut Kering)</label><br>
+
+                    <input type="radio" id="kerusakan_sedang" name="tingkat_kerusakan" value="sedang">
+                    <label for="kerusakan_sedang">Sedang (Tinta Pudar / Dimakan Serangga Sebagian)</label><br>
+
+                    <input type="radio" id="kerusakan_berat" name="tingkat_kerusakan" value="berat">
+                    <label for="kerusakan_berat">Berat (Serat Patah / Rapuh Teroksidasi Asam)</label><br><br>
+
+                    <p><strong>Jenis Layanan Konservasi yang Diinginkan (Bisa Lebih Dari Satu):</strong></p>
+                    <input type="checkbox" id="layanan_pembersihan" name="layanan[]" value="pembersihan">
+                    <label for="layanan_pembersihan">Pembersihan Kimiawi &amp; Deasidifikasi</label><br>
+
+                    <input type="checkbox" id="layanan_digitalisasi" name="layanan[]" value="digitalisasi">
+                    <label for="layanan_digitalisasi">Digitalisasi Optik &amp; Scan Spektral</label><br>
+
+                    <input type="checkbox" id="layanan_transkripsi" name="layanan[]" value="transkripsi">
+                    <label for="layanan_transkripsi">Alih Aksara &amp; Terjemahan Bahasa Kuno</label><br><br>
+
+                    <label for="catatan_kerusakan">Deskripsi Tambahan / Catatan Khusus Naskah:</label><br>
+                    <textarea id="catatan_kerusakan" name="catatan_kerusakan" rows="5" cols="45" placeholder="Tuliskan jika ada bagian naskah yang mudah patah atau kondisi fragmen terpisah..." required></textarea><br><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Tombol Submit dan Reset -->
+                <button type="submit">Kirim Pengajuan Restorasi</button>
+                <button type="reset">Batal / Reset Form</button>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Stasiun Preservasi Naskah Kuno Nusantara. Dipublikasikan untuk Tugas Teori Web.</p>
+        <p>Identitas Penyusun: 202532003 - Dzaky Fadhlurrahman Farozah</p>
+    </footer>
+
+</body>
+</html>
